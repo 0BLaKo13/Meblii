@@ -21,6 +21,10 @@
 <br>
 <br>
 <h3>Список моделей:</h3>
+<div th:each="el : ${furnitures}" class="alert alert-info mt-2">
+    <h3 th:text="${el.title}"/>
+    <p th:text="${el.description}"/>
+</div>
 
 </body>
 </html>
