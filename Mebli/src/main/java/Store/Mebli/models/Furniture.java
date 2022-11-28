@@ -53,4 +53,13 @@ public class Furniture {
     public void setProperties(String properties) {
         this.properties = properties;
     }
+
+    public Furniture() {
+    }
+    public Furniture(String title, String description, String images, String properties) {
+        this.title = title;
+        this.description = description;
+        this.images = images;
+        this.properties = properties;
+    }
 }
