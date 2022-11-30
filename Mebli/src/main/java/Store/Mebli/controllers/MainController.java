@@ -45,4 +45,10 @@ public class MainController {
         model.addAttribute("furniture", res);
         return"model";
     }
+    @PostMapping("/{id}/remove")
+    public String furniturePostDelete(@PathVariable(value = "id") long id, Model model){
+    Furniture furniture = furnitureRepository.findById(id).orElseThrow();
+    furnitureRepository.delete(furniture);
+    return "redirect:/";
+    }
 }

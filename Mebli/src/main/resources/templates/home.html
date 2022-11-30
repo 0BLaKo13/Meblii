@@ -23,9 +23,9 @@
 <h3>Список моделей:</h3>
 <div th:each="el : ${furnitures}" class="alert alert-info mt-2">
     <h3 th:text="${el.title}"/>
-    <p th:text="${el.images}"/>
+    <img th:src="${el.images}" width="120" height="120"/>
+    <br><br>
     <a th:href="'/home/' +${el.id}" class="btn btn-warning">Детальніше</a>
 </div>
-
 </body>
 </html>
