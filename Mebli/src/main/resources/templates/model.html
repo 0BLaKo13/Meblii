@@ -23,8 +23,13 @@
 <div th:each="el : ${furniture}" class="alert alert-info mt-2">
   <h1 th:text="${el.title}"/>
   <img th:src="${el.images}"/>
-  <p th:text="${el.description}"/>
-  <p th:text="${el.properties}"/>
+  <p> Опис: </p>
+  <th th:text="${el.description}"/><br>
+  <p>Характеристики:</p>
+  <th>Колір: </th><th th:text="${el.color}"/><br>
+  <th>Ширина: </th><th th:text="${el.width}"/><th> см.</th><br>
+  <th>Довгота: </th><th th:text="${el.length}"/><th> см.</th><br>
+  <th>Висота: </th><th th:text="${el.height}"/><th> см.</th><br>
   <form th:action="'/' +${el.id} + '/remove'" method="post">
     <button class="btn btn-warning" type="submit">Видалити модель</button>
   </form>

@@ -29,8 +29,8 @@ public class MainController {
         return"add";
     }
     @PostMapping("/add")
-    public String modelPostAdd(@RequestParam String title, @RequestParam String description, @RequestParam String images, @RequestParam String properties, Model model) {
-        Furniture furniture = new Furniture(title, description, images, properties);
+    public String modelPostAdd(@RequestParam String title, @RequestParam String description, @RequestParam String images, @RequestParam String color, @RequestParam String width, @RequestParam String length, @RequestParam String height, Model model) {
+        Furniture furniture = new Furniture(title, description, images, color, width, length, height);
         furnitureRepository.save(furniture);
         return "redirect:/";
     }
