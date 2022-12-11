@@ -20,12 +20,13 @@
 </nav>
 <br>
 <br>
+<br>
 <h3>Список моделей:</h3>
-<div th:each="el : ${furnitures}" class="alert alert-info mt-2">
+<div th:each="el : ${furnitures}" class="alert alert-dark mt-3">
     <h3 th:text="${el.title}"/>
-    <img th:src="${el.images}" width="225" height="200"/>
+    <img th:src="${el.images}" width="400" height="350"/>
     <br><br>
-    <a th:href="'/home/' +${el.id}" class="btn btn-warning">Детальніше</a>
+    <a th:href="'/home/' +${el.id}" class="btn btn-info">Детальніше</a>
 </div>
 </body>
 </html>
